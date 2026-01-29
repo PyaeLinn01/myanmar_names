@@ -20,6 +20,18 @@ print(converter.en2mm("Min Khant Maung Maung"))
 ## 'မင်း ခန့် မောင် မောင်'
 ```
 
+### Streamlit UI
+
+```bash
+# install deps + create .venv
+make install
+
+# start the web UI (runs at http://localhost:8501)
+make run-app
+```
+
+Type a Burmese name (e.g., `မင်းခန့်မောင်မောင်`) into the main textarea to see the syllable break and English output. A secondary panel also handles English → Burmese if you need it. Run commands from the repository root so the data files in [data](data) can be loaded.
+
 ### Makefile
 
 You can setup enviroments and automate quality checks and test cases by using **make**

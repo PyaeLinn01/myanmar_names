@@ -1,0 +1,5 @@
+streamlit>=1.39,<2
+pytest>=7.4,<9
+black>=24.4,<25
+isort>=5.12,<6
+pylint>=3.2,<4
