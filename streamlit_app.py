@@ -110,7 +110,7 @@ with st.container():
 
     mm_input = st.text_area(
         "Burmese name",
-        placeholder="ဉာဏ္နီကြည်" ,
+        placeholder="မင်းခန့်မောင်မောင်" ,
         height=120,
     )
 

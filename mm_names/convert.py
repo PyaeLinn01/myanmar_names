@@ -48,7 +48,25 @@ class Converter:
         mm_syls = []
 
         for eng in eng_names.split():
-            mm_syl = en2mm_dict.get(eng.lower(), eng)
+            mm_syl = self._lookup_en2mm(eng)
             mm_syls.append(mm_syl)
 
         return " ".join(mm_syls)
+
+    @staticmethod
+    def _lookup_en2mm(eng: str) -> str:
+        if not eng:
+            return eng
+
+        candidates = [
+            eng,
+            eng.lower(),
+            eng.capitalize(),
+            eng[:1].upper() + eng[1:],
+        ]
+
+        for candidate in candidates:
+            if candidate in en2mm_dict:
+                return en2mm_dict[candidate]
+
+        return eng
